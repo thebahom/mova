@@ -9,37 +9,28 @@ MOVAARA is a UK-first migration journey product built around a dynamic Journey G
 ### Working product surfaces
 - Landing page with origin/destination/purpose journey builder
 - Conversational onboarding
-- Dynamic Journey Graph with task completion
-- Dashboard with readiness by area and "Here's what you should do next"
-- Family mode that injects dependant, education and healthcare tasks
-- Route explorer with UK route comparison
-- City comparison for London, Manchester, Birmingham, Liverpool and Chester
-- Country intelligence, visa, cost, documents, Near Me, My Life and Ask MOVAARA surfaces
-- Source/provenance boundary and explicit demo-data safety labelling
-- Prisma/PostgreSQL schema boundary
-- Auth.js configuration boundary
-- Responsive mobile-first layouts and PWA manifest
+- Dashboard with task completion
+- Responsive mobile-first layouts and immersive motion-led presentation
 
 ## Run
 
 ```bash
 npm install
-cp .env.example .env
 npm run dev
 ```
 
-Then use:
+Then verify with:
 
 ```bash
 npm run typecheck
-npm run lint
-npm test
 npm run build
 ```
 
-### Verification note
+## Deployment
 
-This workspace did not have dependencies installed and the `npm install` attempt timed out, so a full Next.js build/lint/test execution could not be completed here. The source was updated directly and the dependency-independent journey rule logic was checked with TypeScript's parser/type analysis where possible.
+The project is configured as a standard Next.js app for Vercel. Production deploys from the `main` branch through the connected GitHub repository.
+
+The deployment pipeline intentionally uses standalone CSS so the landing experience does not depend on a PostCSS/Tailwind build plugin.
 
 ## Production safety
 
